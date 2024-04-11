@@ -6,8 +6,65 @@ reset
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lato" sans-serif;
 }
 
 /***********
 body
 ***********/
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to top,#dcdbd2 85%, #039688 15%);
+    display: flex;
+}
+
+/***********
+app
+***********/
+
+.app{
+    display: flex;
+    height: 90vh;
+    width: 80vw;
+    margin: auto;
+    background-color: white;
+}
+
+.col-left{
+    width: 30%;
+}
+
+.col-right{
+    width: 70%;
+}
+
+@media screen and (max-width: 1100px){
+
+    .app{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .col-left{
+        width: 12%;
+    }
+    
+    .col-right{
+        width: 88%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .col-left{
+        display: none;
+    }
+    
+    .col-right{
+        width: 100%;
+    }
+
+}
