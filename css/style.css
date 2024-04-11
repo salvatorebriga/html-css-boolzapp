@@ -6,7 +6,7 @@ reset
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lato" sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 /***********
@@ -27,20 +27,101 @@ app
 .app{
     display: flex;
     height: 90vh;
-    width: 80vw;
+    width: 1200px;
     margin: auto;
     background-color: white;
 }
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/**********
+col left
+**********/
+
 .col-left{
     width: 30%;
+    height: 100%;
 }
+
+.col-left .card-head .col:first-child{
+    background-color: #eaeaea;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-left .card-head .col:nth-child(2){
+    background-color: #8fdafc;
+}
+
+.col-left .card-head .col:first-child > .icons > i{
+    margin: 10px;
+    font-size: 28px;
+    filter: brightness(0) saturate(100%) invert(73%) sepia(9%) saturate(7%) hue-rotate(33deg) brightness(96%) contrast(90%);
+}
+
+/**********
+col right
+**********/
 
 .col-right{
     width: 70%;
+    height: 100%;
 }
 
-@media screen and (max-width: 1100px){
+/*************
+utility
+*************/
+
+.pic{
+    height: 60px;
+    width: 60px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.v1{
+    background-image: url("../img/avatar_1.jpg");
+}
+
+.v2{
+    background-image: url("../img/avatar_2.jpg");
+}
+
+.v3{
+    background-image: url("../img/avatar_3.jpg");
+}
+
+.v4{
+    background-image: url("../img/avatar_4.jpg");
+}
+
+.v5{
+    background-image: url("../img/avatar_5.jpg");
+}
+
+.v6{
+    background-image: url("../img/avatar_6.jpg");
+}
+
+.v7{
+    background-image: url("../img/avatar_7.jpg");
+}
+
+.v8{
+    background-image: url("../img/avatar_8.jpg");
+}
+
+.vio{
+    background-image: url("../img/avatar_io.jpg");
+}
+
+@media screen and (max-width: 1200px){
 
     .app{
         height: 100vh;
@@ -49,6 +130,15 @@ app
 
     .col-left{
         width: 12%;
+    }
+
+    .col-left .card-head .col:first-child{
+        width: fit-content;
+        padding: 10px 20px;
+    }
+
+    .col-left .card-head .col:first-child > .icons{
+        display: none;
     }
     
     .col-right{
