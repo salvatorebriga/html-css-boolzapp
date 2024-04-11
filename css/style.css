@@ -246,7 +246,34 @@ col right
 
 .message-area{
     background-color: #eaeaea;
-    height: 17%;
+    height: 9.5%;
+}
+
+.message-area .col10{
+    width: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-area .col10 > i{
+    font-size: 25px;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(8%) saturate(351%) hue-rotate(150deg) brightness(100%) contrast(88%);
+}
+
+.message-area .col80{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-area .col80 > input{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 10px;
+    font-size: 15px;
 }
 
 /*************
@@ -259,6 +286,10 @@ utility
     background-position: center;
     background-size: contain;
     border-radius: 50%;
+}
+
+.flex{
+    display: flex;
 }
 
 @media screen and (max-width: 1200px){
@@ -345,6 +376,10 @@ utility
         display: flex;
     }
 
+    .message-area{
+        height: 8.5%;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -358,5 +393,23 @@ utility
 
     .col-right .chat-info .col .card .card-icons{
         display: none;
+    }
+
+    .message-area{
+        height: 8.5%;
+    }
+
+
+    .message-area .col10{
+        width: 15%;
+    }
+
+    .message-area .col80{
+        padding: 10px;
+        width: 70%;
+    }
+
+    .message-area .col80 > input{
+        padding: 20px 10px;
     }
 }
