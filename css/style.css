@@ -35,6 +35,11 @@ app
 .row{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+}
+
+.col{
+    width: 100%;
 }
 
 /**********
@@ -46,22 +51,71 @@ col left
     height: 100%;
 }
 
-.col-left .card-head .col:first-child{
-    background-color: #eaeaea;
-    padding: 10px;
+.col-left .col .card{
     display: flex;
+    padding: 10px;
+}
+
+/***********
+prima card
+***********/
+
+.col-left .col:first-child .card {
+    background-color: #eaeaea;
     align-items: center;
     justify-content: space-between;
 }
 
-.col-left .card-head .col:nth-child(2){
+.col-left .col:first-child .card  > .card-icons > i{
+    margin: 10px;
+    font-size: 24px;
+    filter: brightness(0) saturate(100%) invert(73%) sepia(9%) saturate(7%) hue-rotate(33deg) brightness(96%) contrast(90%);
+}
+
+/***********
+seconda card
+***********/
+
+.col-left .col:nth-child(2) .card {
     background-color: #8fdafc;
 }
 
-.col-left .card-head .col:first-child > .icons > i{
-    margin: 10px;
-    font-size: 28px;
-    filter: brightness(0) saturate(100%) invert(73%) sepia(9%) saturate(7%) hue-rotate(33deg) brightness(96%) contrast(90%);
+.col-left .col:nth-child(2) .card .card-pic{
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.col-left .col:nth-child(2) .card .card-pic > .pic{
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(86%) sepia(16%) saturate(4107%) hue-rotate(175deg) brightness(103%) contrast(109%);
+}
+
+.col-left .col:nth-child(2) .card .card-text {
+    padding: 5px 15px;
+}
+
+.col-left .col:nth-child(2) .card .card-text > a{
+    color: #637c86;
+}
+
+/**************
+terza card
+**************/
+
+.col-left .col:nth-child(3) .card {
+    background-color: #eaeaea;
+}
+
+.col-left .col:nth-child(3) .card > input{
+    width: 95%;
+    height: 30px;
+    margin: 0 auto;
+    border: none;
+    padding-left: 10px;
+    color: gray;
+    font-size: 15px;
 }
 
 /**********
@@ -78,8 +132,8 @@ utility
 *************/
 
 .pic{
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     background-position: center;
     background-size: contain;
     border-radius: 50%;
@@ -122,39 +176,38 @@ utility
 }
 
 @media screen and (max-width: 1200px){
-
     .app{
         height: 100vh;
         width: 100vw;
     }
 
+    /************
+    col left
+    ************/
+
     .col-left{
-        width: 12%;
+        width: min-content;
     }
 
-    .col-left .card-head .col:first-child{
-        width: fit-content;
-        padding: 10px 20px;
+    .col-left .col .card{
+        padding: 20px 30px;
     }
 
-    .col-left .card-head .col:first-child > .icons{
+    .col-left .col:first-child .card  > .card-icons{
         display: none;
     }
-    
-    .col-right{
-        width: 88%;
+
+    .col-left .col:nth-child(2) {
+        display: none;
     }
 
+    .col-left .col:nth-child(3){
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px){
-
     .col-left{
         display: none;
     }
-    
-    .col-right{
-        width: 100%;
-    }
-
 }
